@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://srsergiorodriguez.github.io/cajita-test/sitemap.xml

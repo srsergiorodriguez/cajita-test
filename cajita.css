@@ -1,4 +1,6 @@
 @font-face{font-family:'Fraunces';src:url('fonts/fraunces-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Space Mono';src:url('fonts/space-mono-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Space Mono';src:url('fonts/space-mono-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
 :root{color-scheme:light;}
 *,*::before,*::after{box-sizing:border-box;}
 html,body{margin:0;min-height:100%;}
@@ -40,7 +42,9 @@ body.align-left{align-items:flex-start;}
 .el-video{overflow:hidden;background:#000;}
 .el-video video{display:block;width:100%;height:100%;object-fit:var(--fit,cover);}
 .el-audio{display:flex;align-items:center;padding:2cqw;background:var(--panel,#fffdf7);border:1px solid currentColor;font-size:2cqw;}
-.el-audio audio{width:100%;}
+.audio-inner{display:flex;align-items:center;gap:2cqw;width:100%;}
+.audio-label{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.audio-inner audio{flex:1;min-width:0;}
 .summary-el{display:block;width:100%;height:100%;}
 .el-meta{overflow:visible;}
 .el-meta > summary{display:block;width:100%;height:100%;list-style:none;cursor:pointer;}
@@ -59,3 +63,14 @@ body.align-left{align-items:flex-start;}
 a:focus-visible,summary:focus-visible,video:focus-visible,audio:focus-visible{outline:3px solid #e94f37;outline-offset:3px;}
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;}}
 @media (max-width: 700px){body.fit-contain .stage{width:100vw;height:auto;}}
+@view-transition{navigation:auto;}
+::view-transition-old(root),::view-transition-new(root){animation:none;}
+html:active-view-transition-type(fade)::view-transition-old(root){animation:cajita-fade-out 1000ms ease both;}
+html:active-view-transition-type(fade)::view-transition-new(root){animation:cajita-fade-in 1000ms ease both;}
+html:active-view-transition-type(slide)::view-transition-old(root){animation:cajita-slide-out 1000ms ease both;}
+html:active-view-transition-type(slide)::view-transition-new(root){animation:cajita-slide-in 1000ms ease both;}
+@keyframes cajita-fade-out{to{opacity:0;}}
+@keyframes cajita-fade-in{from{opacity:0;}}
+@keyframes cajita-slide-out{to{transform:translateX(-100%);}}
+@keyframes cajita-slide-in{from{transform:translateX(100%);}}
+@media (prefers-reduced-motion: reduce){::view-transition-old(root),::view-transition-new(root){animation:none!important;}}
