@@ -42,6 +42,11 @@ body.align-left{align-items:flex-start;}
 .el-video{overflow:hidden;background:#000;}
 .el-video video{display:block;width:100%;height:100%;object-fit:var(--fit,cover);}
 .el-audio{display:flex;align-items:center;padding:2cqw;background:var(--panel,#fffdf7);border:1px solid currentColor;font-size:2cqw;}
+.el-embed{overflow:hidden;background:#000;}
+.embed-frame{position:relative;width:100%;height:100%;background:#000;}
+.embed-frame iframe{display:block;width:100%;height:100%;border:0;background:#000;}
+.embed-source{position:absolute;right:4px;bottom:4px;padding:2px 4px;background:rgba(0,0,0,.72);color:#fff;font-size:10px;line-height:1.2;text-decoration:none;}
+.embed-source:hover{text-decoration:underline;}
 .audio-inner{display:flex;align-items:center;gap:2cqw;width:100%;}
 .audio-label{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .audio-inner audio{flex:1;min-width:0;}
