@@ -43,7 +43,8 @@ body.align-left{align-items:flex-start;}
 .el-video video{display:block;width:100%;height:100%;object-fit:var(--fit,cover);}
 .el-audio{display:block;padding:0;background:transparent;border:0;font-size:2cqw;}
 .el-shape svg{display:block;width:100%;height:100%;overflow:visible;}
-.el-embed{overflow:hidden;background:#fff;}
+.el-embed,.el-html{overflow:hidden;background:#fff;}
+.el-html iframe{display:block;width:100%;height:100%;border:0;background:#fff;}
 .el-embed--youtube{background:#000;}
 .embed-frame{position:relative;width:100%;height:100%;background:transparent;}
 .el-embed--youtube .embed-frame{background:#000;}
