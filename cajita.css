@@ -37,8 +37,8 @@ body.align-left{align-items:flex-start;}
 .el-link{color:inherit;text-decoration:none;}
 .el-text{white-space:pre-wrap;overflow-wrap:anywhere;overflow:visible;}
 .el-text h1,.el-text p,.el-text div{margin:0;font:inherit;white-space:pre-wrap;}
-.el-image{overflow:hidden;}
-.el-image img{display:block;width:100%;height:100%;object-fit:var(--fit,cover);}
+.el-image,.el-drawing{overflow:hidden;}
+.el-image img,.el-drawing img{display:block;width:100%;height:100%;object-fit:var(--fit,cover);}
 .el-video{overflow:hidden;background:#000;}
 .el-video video{display:block;width:100%;height:100%;object-fit:var(--fit,cover);}
 .el-audio{display:block;padding:0;background:transparent;border:0;font-size:2cqw;}
